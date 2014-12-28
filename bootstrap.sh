@@ -40,7 +40,7 @@ install PostgreSQL postgresql postgresql-contrib libpq-dev
 sudo -u postgres createuser --superuser vagrant
 
 echo Intall RVM
-curl -sSL https://get.rvm.io | bash >/dev/null 2>&1
+su vagrant -c 'curl -sSL https://get.rvm.io | bash' >/dev/null 2>&1
 su vagrant -c 'ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N ""' >/dev/null 2>&1
 
 exit 0
