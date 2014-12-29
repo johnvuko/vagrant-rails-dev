@@ -42,5 +42,6 @@ sudo -u postgres createuser --superuser vagrant
 echo Intall RVM
 su vagrant -c 'curl -sSL https://get.rvm.io | bash' >/dev/null 2>&1
 su vagrant -c 'ssh-keygen -t rsa -b 4096 -f /home/vagrant/.ssh/id_rsa -N ""' >/dev/null 2>&1
+su vagrant -c 'mkdir /home/vagrant/projects/' >/dev/null 2>&1
 
 exit 0
