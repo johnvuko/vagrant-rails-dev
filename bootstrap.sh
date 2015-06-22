@@ -4,18 +4,20 @@ function install {
     apt-get -y install "$@" >/dev/null 2>&1
 }
 
+echo Updating locale
 update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
-echo updating package information
+echo Updating package information
 apt-get -y update >/dev/null 2>&1
+apt-get -y upgrade >/dev/null 2>&1
 
-install "System tools" build-essential ntpdate logrotate htop screen openssl curl
+install "System tools" sudo build-essential ntpdate logrotate htop openssl curl screen tmux
 install Git git
 install SVN subversion
 install SQLite sqlite3 libsqlite3-dev
 install ImageMagick imagemagick
 install Redis redis-server redis-client
-install 'Nokogiri dependencies' libxslt-dev libxml2-dev
+install "Ruby dependencies" libxslt-dev libxml2-dev
 
 echo "
 alias ls='ls --color'

@@ -16,11 +16,11 @@ Building the virtual machine is this easy:
 
 ## What's In The Box
 
-* Debian 7 
+* Debian 8
 
 * Git, SVN
 
-* SQLite3, Redis and Postgres
+* SQLite3, Redis and PostgreSQL
 
 * ImageMagick
 
